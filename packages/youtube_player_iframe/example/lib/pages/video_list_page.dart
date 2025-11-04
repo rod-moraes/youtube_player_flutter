@@ -7,6 +7,7 @@ import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 const List<String> _videoIds = [
   'j4lDDQTKN8s',
+  'j4lDDQTKN8s',
   'bmgia-h1qNg',
   'Cohbiz2lOQI',
   'CoNgsfBbxJk',
@@ -36,6 +37,7 @@ class _VideoListPageState extends State<VideoListPage> {
       (index) {
         final controller = YoutubePlayerController.fromVideoId(
           videoId: _videoIds[index],
+          youtubePlayerMessageChannelKey: UniqueKey().toString(),
           autoPlay: false,
           params: const YoutubePlayerParams(showFullscreenButton: true),
         );
