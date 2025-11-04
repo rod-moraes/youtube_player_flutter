@@ -77,8 +77,9 @@ class YoutubePlayerController implements YoutubePlayerIFrameAPI {
     bool autoPlay = false,
     double? startSeconds,
     double? endSeconds,
+    String? youtubePlayerMessageChannelKey,
   }) {
-    final controller = YoutubePlayerController(params: params, key: videoId);
+    final controller = YoutubePlayerController(params: params, key: videoId, youtubePlayerMessageChannelKey: youtubePlayerMessageChannelKey);
 
     if (autoPlay) {
       controller.loadVideoById(
